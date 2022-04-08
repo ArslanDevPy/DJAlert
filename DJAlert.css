@@ -58,9 +58,6 @@
     border-radius: 4px 4px 0 0;
 }
 
-.progress {
-    animation: alertProgress 5s ease;
-}
 
 @keyframes alertProgress {
     from {

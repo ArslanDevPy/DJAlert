@@ -1,18 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="DJAlert.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-        <p class="lead">A tiny jQuery plugin for creating OS X inspired growl notifications that auto dismiss after 5 seconds.</p>
-        <button onclick="DJAlert('This is an INFO notification!')">Information</button>
-        <button onclick="DJAlert('This is an ERROR notification!', 'error')">Error</button>
-        <button onclick="DJAlert('This is a SUCCESS notification', 'success')">Success</button>
+  </head>
+  <body class="bg-dark">
+    <div class="col-md-8 offset-md-2 card mt-5 pb-5">
+      <h2 class="text-center p-3">DJAlert</h2>
+      <h5 class=" pt-3">A DJAlert jQuery plugin for creating notification that auto dismiss after 5 seconds.</p>
+        <p>Demo.</p>
+        <button class="btn btn-info" onclick="DJAlert('This is an INFO notification!', 'info')">Information Alert</button>
+        <button class="btn btn-danger" onclick="DJAlert('This is an ERROR notification!', 'error')">Error Alert</button>
+        <button class="btn btn-success" onclick="DJAlert('This is a SUCCESS notification!', 'success')">Success Alert</button>
+        <button class="btn btn-warning" onclick="DJAlert('This is a WARNING notification!', 'warning')">Success Alert</button>
+        <button class="btn btn-secondary" onclick="DJAlert('This is a DEBUG notification!', 'debug')">Success Alert</button>
+        <button class="btn" onclick="DJAlert('This is a Null notification!',)">Null Alert</button>
+        <br>
+        <hr>
+        <h4>Make custom notification</h4>
+        <div class=" ml-3">
+          <p>call DJAlert Function and pass 6 parameter</p>
+          <ol>
+            <li>message "Notification message"</li>
+            <li>type "message type"</li>
+            <li>background color and gradient: "color name "red" or "linear-gradient(315deg, #6b0f1a 0%, #b91372 74%)"</li>
+            <li>notification icon : "SVG code, PNG and ETC"</li>
+            <li>if custom pass : true (default false)</li>
+            <li>Delay : default 5s only seconds like (3)</li>
+          </ol>
+          <h5>Example:</h5>
+          <br>
+          &lt;button class="type" onclick="DJAlert(`Notification message`,`type`,`linear-gradient(315deg, #6b0f1a 0%, #b91372 74%)`,
+          `&lt;svg width='24' height='24' viewBox='0 0 32 32' id='icon' xmlns='http://www.w3.org/2000/svg'>
+          &lt;path fill='white' d='M29.4162,14.5905,17.41,2.5838a1.9937,1.9937,0,0,0-2.8192,0L2.5838,14.5905a1.9934,1.9934,0,0,0,0,2.819L14.5905,29.4162a1.9937,1.9937,0,0,0,2.8192,0L29.4162,17.41A1.9934,1.9934,0,0,0,29.4162,14.5905ZM21,18H11V14H21Z'/></svg>`,true,3)"> Custom&lt;/button>
+          <br>
+          <button class="btn btn-outline-success mt-2" onclick="DJAlert(`Notification message`,`type`,`linear-gradient(315deg, #6b0f1a 0%, #b91372 74%)`,`<svg width='24' height='24' viewBox='0 0 32 32' id='icon' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M29.4162,14.5905,17.41,2.5838a1.9937,1.9937,0,0,0-2.8192,0L2.5838,14.5905a1.9934,1.9934,0,0,0,0,2.819L14.5905,29.4162a1.9937,1.9937,0,0,0,2.8192,0L29.4162,17.41A1.9934,1.9934,0,0,0,29.4162,14.5905ZM21,18H11V14H21Z'/></svg>`,true,3)"> Custom notification</button>
+          <hr>
+          <p>Note : Required  jQuery > 3.6</p>
+        </div>
     </div>
+    <div class="card-footer text-center mt-2 text-light">Copyright 2022 <a>Muhammad Arslan</a> All Rights Reserved.</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./DJAlert.js"></script>
-    <script>
-      DJAlert('This is an INFO notification!', 'debug')
-    </script>
-</body>
+  </body>
 </html>
